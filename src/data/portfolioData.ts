@@ -43,6 +43,7 @@ export interface Article {
   readTime: string;
   topic: string;
   tags: string[];
+  mediumUrl?: string;
 }
 
 export const PERSONAL_DATA = {
@@ -54,6 +55,7 @@ export const PERSONAL_DATA = {
   email: "nirajpaul.ios@gmail.com",
   github: "https://github.com/Nirajpaul2",
   linkedin: "https://www.linkedin.com/in/niraj-paul-8782ab143",
+  mediumUrl: "https://medium.com/@nirajpaul2",
   resumeUrl: "https://drive.google.com/file/d/1jn_iu_X9TBHHMoi4lULB-JAtrZWYdJom/view?usp=sharing",
   shortIntro: "I build high-performance iOS and Apple TV applications used by millions of users worldwide. I specialize in OTT Streaming, SwiftUI, scalable architectures, and premium user experiences.",
   detailedBio: `With over 11 years of engineering excellence in the Apple ecosystem, I architect and build enterprise-scale iOS and tvOS applications. Having delivered core video playback engines and high-traffic streaming features for major media platforms like SonyLIV and Tegna, as well as high-conversion e-commerce apps for Fabindia and Purplle, I bridge deep low-level AVFoundation/HLS video pipeline optimization with elegant SwiftUI visual design.`,
@@ -335,6 +337,7 @@ export const ARTICLES: Article[] = [
     readTime: "8 min read",
     topic: "SwiftUI",
     tags: ["SwiftUI", "AVPlayer", "tvOS", "HLS"],
+    mediumUrl: "https://medium.com/@nirajpaul2",
     content: `Building enterprise-grade video streaming applications on iOS and tvOS requires going far beyond basic VideoPlayer wrappers. In high-stakes OTT platforms like SonyLIV or Tegna, user expectations demand instantaneous startup times, smooth bitrate adaptation, seamless ad transitions, and strict DRM compliance.
 
 ### 1. The Custom UIViewControllerRepresentable Wrapper
@@ -369,6 +372,7 @@ In tvOS, remote interaction relies heavily on spatial focus. Custom scrub bars m
     readTime: "6 min read",
     topic: "Architecture",
     tags: ["Swift", "Concurrency", "MVVM", "Combine"],
+    mediumUrl: "https://medium.com/@nirajpaul2",
     content: `Modern iOS development demands clear separation of concerns, strict thread isolation, and predictable state transitions.
 
 ### Key Architectural Pillars:
@@ -398,6 +402,7 @@ actor MediaCacheManager {
     readTime: "5 min read",
     topic: "WWDC",
     tags: ["WWDC", "SwiftUI", "Performance", "Concurrency"],
+    mediumUrl: "https://medium.com/@nirajpaul2",
     content: `Apple's latest developer tools introduce groundbreaking improvements for enterprise apps. Strict concurrency checking in Swift 6 ensures data race safety at compile time, while new SwiftUI layout primitives eliminate manual frame calculations for complex grid structures.`
   }
 ];

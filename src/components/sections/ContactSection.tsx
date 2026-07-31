@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, FileText, Send, CheckCircle2, Copy, Sparkles, MapPin } from "lucide-react";
+import { Mail, FileText, Send, CheckCircle2, Copy, Sparkles, MapPin, BookOpen } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../ui/Icons";
 import { PERSONAL_DATA } from "@/data/portfolioData";
 import confetti from "canvas-confetti";
@@ -93,12 +93,12 @@ export const ContactSection: React.FC = () => {
                 Professional Channels
               </h3>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-3 gap-3">
                 <a
                   href={PERSONAL_DATA.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
+                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center justify-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
                 >
                   <LinkedinIcon className="w-4 h-4 text-[#0A84FF]" /> LinkedIn
                 </a>
@@ -107,9 +107,18 @@ export const ContactSection: React.FC = () => {
                   href={PERSONAL_DATA.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
+                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center justify-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
                 >
                   <GithubIcon className="w-4 h-4 text-white" /> GitHub
+                </a>
+
+                <a
+                  href={PERSONAL_DATA.mediumUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center justify-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
+                >
+                  <BookOpen className="w-4 h-4 text-emerald-400" /> Medium
                 </a>
               </div>
 

@@ -2,8 +2,8 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Clock, Calendar, Tag, BookOpen, Share2 } from "lucide-react";
-import { Article } from "@/data/portfolioData";
+import { X, Clock, Calendar, Tag, ExternalLink, Share2 } from "lucide-react";
+import { Article, PERSONAL_DATA } from "@/data/portfolioData";
 
 interface BlogModalProps {
   article: Article | null;
@@ -12,6 +12,8 @@ interface BlogModalProps {
 
 export const BlogModal: React.FC<BlogModalProps> = ({ article, onClose }) => {
   if (!article) return null;
+
+  const targetMediumUrl = article.mediumUrl || PERSONAL_DATA.mediumUrl;
 
   return (
     <AnimatePresence>
@@ -58,7 +60,7 @@ export const BlogModal: React.FC<BlogModalProps> = ({ article, onClose }) => {
               ))}
             </div>
 
-            <div className="pt-6 border-t border-white/10 flex items-center justify-between">
+            <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap gap-1.5">
                 {article.tags.map((t) => (
                   <span
@@ -70,15 +72,26 @@ export const BlogModal: React.FC<BlogModalProps> = ({ article, onClose }) => {
                 ))}
               </div>
 
-              <button
-                onClick={() => {
-                  navigator.clipboard.writeText(window.location.href);
-                  alert("Article link copied!");
-                }}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-medium text-white transition-colors"
-              >
-                <Share2 className="w-3.5 h-3.5" /> Share Article
-              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(targetMediumUrl);
+                    alert("Medium article link copied!");
+                  }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-xs font-medium text-white transition-colors"
+                >
+                  <Share2 className="w-3.5 h-3.5" /> Share
+                </button>
+
+                <a
+                  href={targetMediumUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#0A84FF] hover:bg-[#0066CC] text-xs font-semibold text-white transition-all shadow-lg shadow-[#0A84FF]/20"
+                >
+                  Read on Medium <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
           </div>
         </motion.div>
