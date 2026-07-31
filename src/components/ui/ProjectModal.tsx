@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, CheckCircle2, Layers, Cpu, Sparkles } from "lucide-react";
+import { X, ExternalLink, CheckCircle2, Layers, Cpu, Sparkles, Play } from "lucide-react";
 import { GithubIcon } from "./Icons";
 import { Project } from "@/data/portfolioData";
 
@@ -44,6 +44,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Modal Body */}
           <div className="p-6 overflow-y-auto space-y-6 text-left">
+            {/* Embedded YouTube Video if available */}
+            {project.youtubeId && (
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black">
+                <iframe
+                  src={`https://www.youtube.com/embed/${project.youtubeId}`}
+                  title={project.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                />
+              </div>
+            )}
+
             <div>
               <h4 className="text-xs font-mono uppercase text-zinc-400 mb-2">Overview</h4>
               <p className="text-sm text-zinc-300 leading-relaxed">

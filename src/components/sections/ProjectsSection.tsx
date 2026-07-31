@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Search, Sparkles, Code, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Search, Sparkles, Code, ArrowUpRight, CheckCircle2, Play } from "lucide-react";
 import { FEATURED_PROJECTS, Project } from "@/data/portfolioData";
 import { ProjectModal } from "../ui/ProjectModal";
 
@@ -87,7 +87,7 @@ export const ProjectsSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               whileHover={{ y: -6 }}
-              className="linear-card p-8 flex flex-col justify-between space-y-6 group"
+              className="linear-card p-6 sm:p-8 flex flex-col justify-between space-y-6 group"
             >
               <div className="space-y-4 text-left">
                 {/* Header Category & External URL */}
@@ -101,12 +101,25 @@ export const ProjectsSection: React.FC = () => {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-zinc-400 hover:text-white flex items-center gap-1 font-mono transition-colors"
+                      className="text-xs text-white hover:text-[#0A84FF] bg-zinc-900 border border-white/10 px-3 py-1 rounded-lg flex items-center gap-1 font-mono transition-all hover:scale-105"
                     >
-                      Live Link <ArrowUpRight className="w-3.5 h-3.5 text-[#0A84FF]" />
+                      Visit Live Demo <ArrowUpRight className="w-3.5 h-3.5 text-[#0A84FF]" />
                     </a>
                   )}
                 </div>
+
+                {/* Embedded Video Player if youtubeId exists */}
+                {project.youtubeId && (
+                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-xl bg-black my-2">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${project.youtubeId}`}
+                      title={project.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full border-0"
+                    />
+                  </div>
+                )}
 
                 <div>
                   <h3 className="text-xl font-bold text-white group-hover:text-[#0A84FF] transition-colors">

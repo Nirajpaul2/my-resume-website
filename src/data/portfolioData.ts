@@ -9,6 +9,8 @@ export interface Project {
   image?: string;
   url?: string;
   github?: string;
+  youtubeUrl?: string;
+  youtubeId?: string;
   tech: string[];
   keyFeatures: string[];
   metrics?: string;
@@ -97,6 +99,8 @@ export const FEATURED_PROJECTS: Project[] = [
     category: "Fullstack / Cloud",
     featured: true,
     url: "https://library.aiwazir.com/",
+    youtubeUrl: "https://www.youtube.com/watch?v=g71VOFjvJhk",
+    youtubeId: "g71VOFjvJhk",
     tech: ["Flutter", "FastAPI", "Supabase", "Firebase", "Docker", "N8N"],
     keyFeatures: [
       "Real-time seat reservation matrix with interactive layout map",
