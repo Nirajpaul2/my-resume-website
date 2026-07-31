@@ -8,17 +8,25 @@ import { PERSONAL_DATA } from "@/data/portfolioData";
 import confetti from "canvas-confetti";
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", projectType: "Enterprise iOS App", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Construct mailto URL to send email directly to nirajpaul.ios@gmail.com
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    const mailtoUrl = `mailto:${PERSONAL_DATA.email}?subject=${subject}&body=${body}`;
+    
+    window.location.href = mailtoUrl;
+
     setSubmitted(true);
     confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: "", email: "", projectType: "Enterprise iOS App", message: "" });
+      setFormData({ name: "", email: "", message: "" });
     }, 4000);
   };
 
@@ -147,9 +155,9 @@ export const ContactSection: React.FC = () => {
                 <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
                   <Sparkles className="w-6 h-6" />
                 </div>
-                <h4 className="text-lg font-bold text-white">Message Transmitted!</h4>
+                <h4 className="text-lg font-bold text-white">Opening Email Client...</h4>
                 <p className="text-xs text-zinc-300">
-                  Thank you for reaching out. Niraj will review your request and reply shortly.
+                  Your message was formatted and directed to <strong className="text-white">nirajpaul.ios@gmail.com</strong>.
                 </p>
               </motion.div>
             ) : (
@@ -181,23 +189,9 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-zinc-400 mb-1.5">Inquiry Type</label>
-                  <select
-                    value={formData.projectType}
-                    onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                    className="w-full px-4 py-3 bg-zinc-950 rounded-xl border border-white/10 text-xs text-white focus:outline-none focus:border-[#0A84FF]"
-                  >
-                    <option value="Enterprise iOS App">Enterprise iOS / SwiftUI Project</option>
-                    <option value="OTT Streaming Architecture">OTT / Apple TV Video Streaming Engine</option>
-                    <option value="Full-Time Lead Role">Senior iOS Lead / Architect Hiring</option>
-                    <option value="Advisory / Consulting">Technical Advisory & Code Audit</option>
-                  </select>
-                </div>
-
-                <div>
                   <label className="block text-xs font-mono text-zinc-400 mb-1.5">Project Details / Message</label>
                   <textarea
-                    rows={4}
+                    rows={5}
                     required
                     placeholder="Briefly describe your objectives, architecture requirements, or timeline..."
                     value={formData.message}

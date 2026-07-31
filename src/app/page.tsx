@@ -13,7 +13,6 @@ import { TechStackSection } from "@/components/sections/TechStackSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { AchievementsSection } from "@/components/sections/AchievementsSection";
-import { SkillGraphSection } from "@/components/sections/SkillGraphSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
@@ -22,7 +21,7 @@ export default function Home() {
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-[#09090B] text-white selection:bg-[#0A84FF]/30 selection:text-white">
+    <main className="relative min-h-screen bg-[#09090B] text-white selection:bg-[#0A84FF]/30 selection:text-[#0A84FF]">
       {/* Entrance Animation Loader */}
       <LoadingScreen />
 
@@ -49,7 +48,6 @@ export default function Home() {
         <ExperienceSection />
         <ProjectsSection />
         <AchievementsSection />
-        <SkillGraphSection />
         <BlogSection />
         <ContactSection />
         <Footer />
