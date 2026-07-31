@@ -14,7 +14,6 @@ import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { AchievementsSection } from "@/components/sections/AchievementsSection";
 import { SkillGraphSection } from "@/components/sections/SkillGraphSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
@@ -51,7 +50,6 @@ export default function Home() {
         <ProjectsSection />
         <AchievementsSection />
         <SkillGraphSection />
-        <TestimonialsSection />
         <BlogSection />
         <ContactSection />
         <Footer />

@@ -60,7 +60,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
     },
     {
       id: "email",
-      title: "Copy Direct Email (nirajpaul.dev@gmail.com)",
+      title: `Copy Direct Email (${PERSONAL_DATA.email})`,
       category: "Quick Actions",
       icon: Mail,
       action: () => {

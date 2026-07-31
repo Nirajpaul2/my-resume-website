@@ -45,33 +45,23 @@ export interface Article {
   tags: string[];
 }
 
-export interface Testimonial {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  avatar: string;
-  text: string;
-  relationship: string;
-}
-
 export const PERSONAL_DATA = {
   name: "Niraj Paul",
   title: "Senior iOS Developer",
   roleTagline: "Specializing in OTT Streaming, SwiftUI, tvOS & High-Performance Apple Architectures",
   experienceYears: "11+",
   location: "Bangalore, India",
-  email: "nirajpaul.dev@gmail.com",
-  github: "https://github.com/nirajpaul",
-  linkedin: "https://www.linkedin.com/in/nirajpaul",
+  email: "nirajpaul.ios@gmail.com",
+  github: "https://github.com/Nirajpaul2",
+  linkedin: "https://www.linkedin.com/in/niraj-paul-8782ab143",
   resumeUrl: "https://drive.google.com/file/d/1jn_iu_X9TBHHMoi4lULB-JAtrZWYdJom/view?usp=sharing",
   shortIntro: "I build high-performance iOS and Apple TV applications used by millions of users worldwide. I specialize in OTT Streaming, SwiftUI, scalable architectures, and premium user experiences.",
-  detailedBio: `With over 11 years of engineering excellence in the Apple ecosystem, I architect and build enterprise-scale iOS and tvOS applications. Having led core video playback engines and high-traffic streaming features for major media platforms like SonyLIV and Tegna, as well as high-conversion e-commerce apps for Fabindia and Purplle, I bridge deep low-level AVFoundation/HLS video pipeline optimization with elegant SwiftUI visual design.`,
+  detailedBio: `With over 11 years of engineering excellence in the Apple ecosystem, I architect and build enterprise-scale iOS and tvOS applications. Having delivered core video playback engines and high-traffic streaming features for major media platforms like SonyLIV and Tegna, as well as high-conversion e-commerce apps for Fabindia and Purplle, I bridge deep low-level AVFoundation/HLS video pipeline optimization with elegant SwiftUI visual design.`,
   companies: [
-    { name: "Tegna", role: "Senior iOS Engineer", description: "US News & OTT Broadcasting Platform" },
-    { name: "SonyLIV", role: "Lead Video & iOS Architect", description: "Enterprise OTT Video Streaming Platform" },
-    { name: "Purplle", role: "Senior Mobile Engineer", description: "Beauty E-Commerce App serving millions" },
-    { name: "Fabindia", role: "Lead iOS Developer", description: "Flagship Retail & Lifestyle Mobile App" },
+    { name: "Tegna Inc. (Wipro)", role: "Senior iOS Developer (Contract)", description: "US News & OTT Broadcasting Platform (KING 5, WBIR, 9News)" },
+    { name: "Sony Pictures Network (SonyLIV)", role: "Senior iOS Developer", description: "Enterprise OTT Video Streaming Platform" },
+    { name: "Purplle.com", role: "Senior iOS Developer", description: "Beauty E-Commerce App serving millions" },
+    { name: "Fabindia", role: "Senior iOS Developer", description: "Flagship Retail & Lifestyle Mobile App" },
   ],
   specializations: [
     "iOS",
@@ -153,7 +143,7 @@ export const FEATURED_PROJECTS: Project[] = [
       "Tailored tvOS remote focus engine with fluid 60fps animations"
     ],
     metrics: "Scaled to 5M+ concurrent stream sessions with <0.5% playback error rate",
-    role: "Principal iOS / tvOS Architect"
+    role: "Senior iOS Developer"
   },
   {
     id: "ecommerce-fabindia-purplle",
@@ -172,7 +162,7 @@ export const FEATURED_PROJECTS: Project[] = [
       "Comprehensive unit test suite achieving 85%+ code coverage"
     ],
     metrics: "Boosted checkout conversion by 18% & reduced crash rate to <0.02%",
-    role: "Senior iOS Engineer & Team Lead"
+    role: "Senior iOS Developer"
   }
 ];
 
@@ -216,7 +206,6 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     iconName: "Cpu",
     skills: [
       { name: "GitHub Actions", level: 90, highlight: true, category: "DevOps" },
-      { name: "Fastlane", level: 92, highlight: true, category: "DevOps" },
       { name: "Git", level: 95, highlight: false, category: "DevOps" },
       { name: "XCTest", level: 88, highlight: true, category: "DevOps" }
     ]
@@ -226,71 +215,114 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const WORK_EXPERIENCES: Experience[] = [
   {
     id: "tegna",
-    company: "Tegna",
-    role: "Senior iOS Engineer",
-    location: "US Broadcast / Remote",
-    period: "2023 - Present",
-    duration: "3+ Years",
-    description: "Leading core iOS and tvOS broadcast media streaming features for 64+ local TV stations in the US, powering live news broadcasts and video-on-demand.",
+    company: "Wipro Limited (Client: Tegna Inc.)",
+    role: "Senior iOS Developer (Contract)",
+    location: "US Broadcast / Remote / Bangalore",
+    period: "May 2025 – March 2026",
+    duration: "10 Months",
+    description: "Architected and developed high-performance iOS and AppleTV (tvOS) OTT media streaming applications from scratch using Swift and SwiftUI, delivering content to millions of active viewers (KING 5 NEWS, WBIR, 9News).",
     achievements: [
-      "Engineered low-latency live streaming integration powering millions of daily news viewers.",
-      "Optimized tvOS remote navigation experience, cutting UI frame drops to 0%.",
-      "Implemented dynamic server-side ad insertion (SSAI) increasing ad revenue yield by 22%.",
-      "Automated TestFlight & App Store submission workflows using Fastlane and GitHub Actions."
+      "Architected and developed high-performance iOS and tvOS OTT streaming news apps from scratch.",
+      "Successfully launched three major regional news streaming apps: KING 5 NEWS, WBIR, and 9News.",
+      "Integrated and optimized AVPlayer with HTTP Live Streaming (HLS) supporting client-side and server-side DAI.",
+      "Implemented analytics and compliance SDKs including NPAW, Comscore, RudderStack, and OneTrust."
     ],
-    techStack: ["Swift", "SwiftUI", "tvOS", "AVPlayer", "HLS", "Combine", "Fastlane", "XCTest"],
+    techStack: ["Swift", "SwiftUI", "tvOS", "AVPlayer", "HLS", "Combine", "XCTest"],
     logo: "TG"
   },
   {
-    id: "sonyliv",
-    company: "SonyLIV",
-    role: "Lead Video & iOS Architect",
+    id: "neosoft",
+    company: "NeoSoft Technology",
+    role: "Senior iOS Developer",
     location: "Bangalore, India",
-    period: "2020 - 2023",
-    duration: "3 Years",
-    description: "Architected the primary video streaming engine and iOS/tvOS playback pipeline for one of South Asia's largest OTT streaming platforms.",
+    period: "June 2021 – April 2025",
+    duration: "3 Yrs 11 Mos",
+    description: "Worked as a Senior Developer collaborating with key clients (Sony Pictures Network / SonyLIV, purplle.com, Fabindia) to build and scale flagship iOS and tvOS apps.",
     achievements: [
-      "Built custom AVPlayer streaming pipeline supporting 4K HDR playback and FairPlay DRM.",
-      "Spearheaded live sports event scaling (Cricket World Cup) handling peak concurrency of 10M+ stream requests.",
-      "Reduced video start time (time-to-first-frame) by 45% through aggressive segment prefetching.",
-      "Mentored a team of 8 iOS engineers in MVVM Clean Architecture and reactive Combine patterns."
+      "Sony Pictures Network: Built and maintained SonyLIV AppleTV app in Swift and SwiftUI, reducing content load time by 20%.",
+      "purplle.com: Enhanced shopping and checkout flows with Juspay payment SDK, reducing cart abandonment by 30%.",
+      "Fabindia: Architected core retail features using MVVM and Combine for catalog updates, search, and wishlists.",
+      "Shipped modular reusable components, decreasing feature cycle time by 30% and hardening application security."
     ],
-    techStack: ["Swift", "UIKit", "AVPlayer", "HLS", "Combine", "CoreData", "XCTest"],
-    logo: "SL"
+    techStack: ["Swift", "SwiftUI", "UIKit", "tvOS", "AVPlayer", "HLS", "Combine", "CoreData"],
+    logo: "NS"
   },
   {
-    id: "purplle",
-    company: "Purplle",
-    role: "Senior Mobile Engineer",
+    id: "sakha-global",
+    company: "Sakha Global (Client: Spectra Logic)",
+    role: "Senior iOS Developer",
     location: "Bangalore, India",
-    period: "2017 - 2020",
-    duration: "3 Years",
-    description: "Engineered core e-commerce shopping features, real-time beauty recommendation engines, and high-conversion checkout flows.",
+    period: "October 2020 – June 2021",
+    duration: "9 Months",
+    description: "Engineered the SpectraLogix application, building custom UI components, advanced animations, and conducting feasibility reviews.",
     achievements: [
-      "Re-architected legacy objective-c shopping cart to reactive Swift MVVM flow.",
-      "Integrated 1-tap Razorpay & Apple Pay checkout, elevating conversion rate by 15%.",
-      "Implemented CoreData persistent offline wishlist and intelligent search history cache.",
-      "Integrated Firebase Analytics & Crashlytics, reducing app crashes to below 0.01%."
+      "Engineered SpectraLogix app with custom UI components and advanced fluid layout animations.",
+      "Decreased customer UI complaints by conducting UX/UI feasibility reviews.",
+      "Implemented XCTest unit tests, resolved memory leaks, and optimized CPU usage with Xcode Instruments."
     ],
-    techStack: ["Swift", "Objective-C", "UIKit", "Firebase", "CoreData", "MVVM"],
-    logo: "PU"
+    techStack: ["Swift", "UIKit", "XCTest", "Instruments", "MVVM"],
+    logo: "SG"
   },
   {
-    id: "fabindia",
-    company: "Fabindia",
-    role: "Lead iOS Developer",
+    id: "aquarious",
+    company: "Aquarious Technology",
+    role: "Senior iOS Developer",
     location: "Bangalore, India",
-    period: "2014 - 2017",
-    duration: "3 Years",
-    description: "Developed the flagship retail e-commerce iOS app for India's iconic artisanal lifestyle brand from scratch.",
+    period: "June 2017 – July 2020",
+    duration: "3 Yrs 2 Mos",
+    description: "Led delivery of 5 distinct crowdsourced geofencing apps (See it, Say it, Send it, The Pet Detective, ToDone, Take Stock in Children, S3 Law Enforcement).",
     achievements: [
-      "Designed and launched the initial version of the Fabindia iOS App on the App Store.",
-      "Implemented smooth fluid product catalog swipe animations using custom UICollectionView layouts.",
-      "Built offline product catalog caching for in-store retail associate lookups.",
-      "Achieved 4.8 star average rating on the Apple App Store."
+      "Integrated CoreLocation-based geofencing to trigger real-time dispatch of emergency media to police centers.",
+      "Implemented Face ID / Touch ID biometric authentication and secure Keychain storage across 5 apps.",
+      "Mentored junior developers and introduced code review pipelines, consistently delivering ahead of schedule."
     ],
-    techStack: ["Objective-C", "Swift", "UIKit", "CoreData", "CocoaPods"],
-    logo: "FI"
+    techStack: ["Swift", "UIKit", "CoreLocation", "Face ID", "Keychain"],
+    logo: "AT"
+  },
+  {
+    id: "unified-infotech",
+    company: "Unified Infotech",
+    role: "iOS Developer",
+    location: "Bangalore, India",
+    period: "December 2016 – April 2017",
+    duration: "5 Months",
+    description: "Built and maintained customer-facing iOS applications using Swift and UIKit with adaptive Auto Layout interfaces.",
+    achievements: [
+      "Built and maintained customer-facing iOS applications using Swift and UIKit.",
+      "Designed responsive, adaptive interfaces using Auto Layout and Size Classes across all device orientations."
+    ],
+    techStack: ["Swift", "UIKit", "Auto Layout"],
+    logo: "UI"
+  },
+  {
+    id: "brainium",
+    company: "Brainium Information Technologies",
+    role: "iOS Developer",
+    location: "Bangalore, India",
+    period: "January 2016 – December 2016",
+    duration: "1 Year",
+    description: "Developed and optimized consumer applications utilizing Swift, Objective-C, and UIKit.",
+    achievements: [
+      "Developed consumer applications using Swift, Objective-C, and UIKit.",
+      "Worked on UI design execution, REST API integration, and debugging complex multithreading issues."
+    ],
+    techStack: ["Swift", "Objective-C", "UIKit", "REST API"],
+    logo: "BI"
+  },
+  {
+    id: "webtech",
+    company: "WebTech Software Solution",
+    role: "Junior iOS Developer",
+    location: "Bangalore, India",
+    period: "November 2014 – December 2015",
+    duration: "1 Yr 2 Mos",
+    description: "Programmed custom user interfaces programmatically and integrated REST APIs using Objective-C.",
+    achievements: [
+      "Programmed custom user interfaces programmatically using Objective-C.",
+      "Maintained legacy applications, resolving memory leaks and updating layouts for newer iOS versions."
+    ],
+    techStack: ["Objective-C", "UIKit", "REST API"],
+    logo: "WT"
   }
 ];
 
@@ -370,36 +402,6 @@ actor MediaCacheManager {
   }
 ];
 
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    id: "1",
-    name: "Alex Rivera",
-    role: "VP of Engineering",
-    company: "Tegna Media",
-    avatar: "AR",
-    text: "Niraj's deep expertise in AVFoundation and tvOS video pipelines transformed our streaming apps. He delivered zero-lag live playback for millions of concurrent viewers and brought exceptional architectural discipline to the team.",
-    relationship: "Managed Niraj directly at Tegna"
-  },
-  {
-    id: "2",
-    name: "Vikram Malhotra",
-    role: "Director of Product",
-    company: "SonyLIV",
-    avatar: "VM",
-    text: "Working with Niraj during high-concurrency sporting events was a masterclass in calm engineering leadership. His optimizations cut video startup times in half and raised our playback reliability to enterprise standards.",
-    relationship: "Collaborated on SonyLIV OTT Platform"
-  },
-  {
-    id: "3",
-    name: "Ananya Sharma",
-    role: "Head of Mobile Technology",
-    company: "Purplle",
-    avatar: "AS",
-    text: "Niraj is one of those rare senior engineers who combines deep low-level iOS knowledge with a fanatic focus on user experience and checkout metrics. He revolutionized our shopping cart performance.",
-    relationship: "Lead Engineer peer at Purplle"
-  }
-];
-
 export const TERMINAL_COMMANDS: Record<string, string> = {
   help: `Available commands:
   - bio         : Print Niraj's background & intro
@@ -416,20 +418,20 @@ Intro: "I build high-performance iOS and Apple TV applications used by millions 
   • Apple: Swift, SwiftUI, UIKit, tvOS, Objective-C
   • Media: AVPlayer, HLS, WebRTC, Socket.io
   • Architecture: MVVM, Combine, CoreData, Realm
-  • DevOps/Tools: Fastlane, GitHub Actions, Git, XCTest, SPM, CocoaPods`,
+  • DevOps/Tools: GitHub Actions, Git, XCTest, SPM, CocoaPods`,
   experience: `Work Timeline:
-  [2023 - Present] Tegna (Senior iOS Engineer) - US Broadcast & OTT Streaming
-  [2020 - 2023] SonyLIV (Lead Video & iOS Architect) - OTT Streaming for Millions
-  [2017 - 2020] Purplle (Senior Mobile Engineer) - High-Conversion E-Commerce App
-  [2014 - 2017] Fabindia (Lead iOS Developer) - Iconic Retail iOS App`,
+  [May 2025 - Mar 2026] Wipro (Tegna Inc. Client) - Senior iOS Developer (10 Months)
+  [Jun 2021 - Apr 2025] NeoSoft (SonyLIV, Purplle, Fabindia) - Senior iOS Developer
+  [Oct 2020 - Jun 2021] Sakha Global (Spectra Logic) - Senior iOS Developer
+  [Jun 2017 - Jul 2020] Aquarious Technology - Senior iOS Developer`,
   projects: `Featured Projects:
   1. Library Management System (https://library.aiwazir.com/)
   2. AI Video Downloader (https://downloader.nirajpaul.com/)
   3. Enterprise OTT Streaming App (Apple TV & iOS)
   4. Fabindia & Purplle E-Commerce Apps`,
   contact: `Contact Channels:
-  Email: nirajpaul.dev@gmail.com
-  LinkedIn: https://www.linkedin.com/in/nirajpaul
-  GitHub: https://github.com/nirajpaul
+  Email: nirajpaul.ios@gmail.com
+  LinkedIn: https://www.linkedin.com/in/niraj-paul-8782ab143
+  GitHub: https://github.com/Nirajpaul2
   Location: Bangalore, India`
 };

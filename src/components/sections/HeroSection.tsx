@@ -156,7 +156,7 @@ export const HeroSection: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-xs font-bold text-white leading-tight">Niraj Paul</h3>
-                    <p className="text-[10px] text-zinc-400">Senior iOS Architect</p>
+                    <p className="text-[10px] text-zinc-400">Senior iOS Developer</p>
                   </div>
                 </div>
 
