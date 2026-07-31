@@ -1,34 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Mail, FileText, Send, CheckCircle2, Copy, Sparkles, MapPin, BookOpen } from "lucide-react";
+import { Mail, FileText, CheckCircle2, Copy, MapPin, BookOpen } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../ui/Icons";
 import { PERSONAL_DATA } from "@/data/portfolioData";
-import confetti from "canvas-confetti";
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Construct mailto URL to send email directly to nirajpaul.ios@gmail.com
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    const mailtoUrl = `mailto:${PERSONAL_DATA.email}?subject=${subject}&body=${body}`;
-    
-    window.location.href = mailtoUrl;
-
-    setSubmitted(true);
-    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 4000);
-  };
 
   const copyEmail = () => {
     navigator.clipboard.writeText(PERSONAL_DATA.email);
@@ -53,22 +31,23 @@ export const ContactSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-start max-w-5xl mx-auto">
+        {/* Centered Contact Cards Container */}
+        <div className="max-w-3xl mx-auto grid sm:grid-cols-2 gap-6 text-left">
           
-          {/* Left Contact Information Cards */}
-          <div className="lg:col-span-5 space-y-6 text-left">
-            <div className="linear-card p-6 space-y-4">
-              <h3 className="text-lg font-bold text-white mb-2">Direct Contact</h3>
+          {/* Direct Contact Card */}
+          <div className="linear-card p-6 flex flex-col justify-between space-y-6">
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">Direct Contact</h3>
 
               {/* Email Row */}
-              <div className="p-4 rounded-xl bg-zinc-900/80 border border-white/10 flex items-center justify-between">
+              <div className="p-4 rounded-xl bg-zinc-900/80 border border-white/10 flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <div className="p-2.5 rounded-lg bg-[#0A84FF]/10 text-[#0A84FF]">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[11px] font-mono text-zinc-500 block">Email Address</span>
-                    <a href={`mailto:${PERSONAL_DATA.email}`} className="text-xs font-semibold text-white hover:text-[#0A84FF]">
+                    <a href={`mailto:${PERSONAL_DATA.email}`} className="text-xs font-semibold text-white hover:text-[#0A84FF] transition-colors">
                       {PERSONAL_DATA.email}
                     </a>
                   </div>
@@ -95,119 +74,61 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Social Links & Resume Download Card */}
-            <div className="linear-card p-6 space-y-4">
-              <h3 className="text-sm font-bold text-white uppercase font-mono tracking-wider">
-                Professional Channels
-              </h3>
+            <a
+              href={`mailto:${PERSONAL_DATA.email}`}
+              className="w-full py-3 text-xs font-bold text-white bg-gradient-to-r from-[#0A84FF] to-[#0066CC] hover:from-[#0066CC] hover:to-[#0A84FF] rounded-xl shadow-lg shadow-[#0A84FF]/20 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <Mail className="w-4 h-4" /> Send Email Direct
+            </a>
+          </div>
 
-              <div className="grid grid-cols-3 gap-3">
+          {/* Professional Channels & Resume Download Card */}
+          <div className="linear-card p-6 flex flex-col justify-between space-y-6">
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">Professional Channels</h3>
+
+              <div className="grid grid-cols-3 gap-3 mb-4">
                 <a
                   href={PERSONAL_DATA.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center justify-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
+                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex flex-col items-center justify-center gap-1.5 text-xs font-semibold text-zinc-300 hover:text-white transition-all hover:scale-105"
                 >
-                  <LinkedinIcon className="w-4 h-4 text-[#0A84FF]" /> LinkedIn
+                  <LinkedinIcon className="w-5 h-5 text-[#0A84FF]" />
+                  <span>LinkedIn</span>
                 </a>
 
                 <a
                   href={PERSONAL_DATA.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center justify-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
+                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex flex-col items-center justify-center gap-1.5 text-xs font-semibold text-zinc-300 hover:text-white transition-all hover:scale-105"
                 >
-                  <GithubIcon className="w-4 h-4 text-white" /> GitHub
+                  <GithubIcon className="w-5 h-5 text-white" />
+                  <span>GitHub</span>
                 </a>
 
                 <a
                   href={PERSONAL_DATA.mediumUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex items-center justify-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-all"
+                  className="p-3 rounded-xl bg-zinc-900 border border-white/10 hover:border-[#0A84FF] flex flex-col items-center justify-center gap-1.5 text-xs font-semibold text-zinc-300 hover:text-white transition-all hover:scale-105"
                 >
-                  <BookOpen className="w-4 h-4 text-emerald-400" /> Medium
+                  <BookOpen className="w-5 h-5 text-emerald-400" />
+                  <span>Medium</span>
                 </a>
               </div>
-
-              <a
-                href={PERSONAL_DATA.resumeUrl}
-                download="Niraj_Paul_Senior_iOS_Developer_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full p-3.5 rounded-xl bg-gradient-to-r from-zinc-800 to-zinc-900 hover:from-zinc-700 hover:to-zinc-800 border border-white/10 flex items-center justify-center gap-2 text-xs font-semibold text-white transition-all shadow-lg"
-              >
-                <FileText className="w-4 h-4 text-[#0A84FF]" /> Download Official Resume (PDF)
-              </a>
             </div>
-          </div>
 
-          {/* Right Interactive Form */}
-          <div className="lg:col-span-7 linear-card p-8 text-left">
-            <h3 className="text-xl font-bold text-white mb-6">Send Message</h3>
-
-            {submitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="p-8 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 text-center space-y-3"
-              >
-                <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
-                  <Sparkles className="w-6 h-6" />
-                </div>
-                <h4 className="text-lg font-bold text-white">Opening Email Client...</h4>
-                <p className="text-xs text-zinc-300">
-                  Your message was formatted and directed to <strong className="text-white">nirajpaul.ios@gmail.com</strong>.
-                </p>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-mono text-zinc-400 mb-1.5">Your Name</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Sarah Jenkins"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-zinc-950 rounded-xl border border-white/10 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#0A84FF]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-mono text-zinc-400 mb-1.5">Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="e.g. sarah@company.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 bg-zinc-950 rounded-xl border border-white/10 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#0A84FF]"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-mono text-zinc-400 mb-1.5">Project Details / Message</label>
-                  <textarea
-                    rows={5}
-                    required
-                    placeholder="Briefly describe your objectives, architecture requirements, or timeline..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 bg-zinc-950 rounded-xl border border-white/10 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#0A84FF]"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-4 text-xs font-bold text-white bg-gradient-to-r from-[#0A84FF] to-[#7C3AED] hover:from-[#0066CC] hover:to-[#6D28D9] rounded-xl shadow-xl shadow-[#0A84FF]/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.01] active:scale-[0.99]"
-                >
-                  Send Message <Send className="w-4 h-4" />
-                </button>
-              </form>
-            )}
+            <a
+              href={PERSONAL_DATA.resumeUrl}
+              download="Niraj_Paul_Senior_iOS_Developer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full p-3.5 rounded-xl bg-gradient-to-r from-zinc-800 to-zinc-900 hover:from-zinc-700 hover:to-zinc-800 border border-white/10 flex items-center justify-center gap-2 text-xs font-semibold text-white transition-all shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <FileText className="w-4 h-4 text-[#0A84FF]" /> Download Official Resume (PDF)
+            </a>
           </div>
 
         </div>
