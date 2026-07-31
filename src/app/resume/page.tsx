@@ -28,11 +28,12 @@ export default function ResumePage() {
           </button>
 
           <a
-            href="/Niraj_Paul_Senior_iOS_Developer_Resume.pdf"
-            download="Niraj_Paul_Senior_iOS_Developer_Resume.pdf"
+            href="https://drive.google.com/file/d/1jn_iu_X9TBHHMoi4lULB-JAtrZWYdJom/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2 text-xs font-semibold bg-[#0A84FF] hover:bg-[#0066CC] text-white rounded-xl flex items-center gap-2 transition-all shadow-lg shadow-[#0A84FF]/20"
           >
-            <Download className="w-4 h-4" /> Download Original PDF
+            <Download className="w-4 h-4" /> Download Resume (Google Drive)
           </a>
         </div>
       </div>
