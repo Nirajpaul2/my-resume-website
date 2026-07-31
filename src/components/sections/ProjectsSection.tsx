@@ -121,6 +121,17 @@ export const ProjectsSection: React.FC = () => {
                   </div>
                 )}
 
+                {/* Screenshot Image Preview if image exists */}
+                {project.image && !project.youtubeId && (
+                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-xl bg-zinc-900 my-2 group-hover:border-[#0A84FF]/40 transition-all">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+
                 <div>
                   <h3 className="text-xl font-bold text-white group-hover:text-[#0A84FF] transition-colors">
                     {project.title}

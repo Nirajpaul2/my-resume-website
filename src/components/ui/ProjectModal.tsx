@@ -57,6 +57,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               </div>
             )}
 
+            {/* Screenshot Image Preview if available */}
+            {project.image && !project.youtubeId && (
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-zinc-900">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+
             <div>
               <h4 className="text-xs font-mono uppercase text-zinc-400 mb-2">Overview</h4>
               <p className="text-sm text-zinc-300 leading-relaxed">

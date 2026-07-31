@@ -121,6 +121,7 @@ export const FEATURED_PROJECTS: Project[] = [
     category: "Fullstack / Cloud",
     featured: true,
     url: "https://downloader.nirajpaul.com/",
+    image: "/images/ai_downloader_screenshot.jpg",
     tech: ["Next.js", "React", "Node.js", "FFmpeg", "Docker"],
     keyFeatures: [
       "Multi-resolution 4K/1080p video extraction pipeline",
