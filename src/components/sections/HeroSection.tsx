@@ -85,6 +85,7 @@ export const HeroSection: React.FC = () => {
 
               <a
                 href={PERSONAL_DATA.resumeUrl}
+                download="Niraj_Paul_Senior_iOS_Developer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 text-sm font-semibold text-zinc-200 bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-white/20 rounded-xl flex items-center gap-2 transition-all hover:scale-105 active:scale-95"

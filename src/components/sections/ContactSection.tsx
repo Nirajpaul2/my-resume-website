@@ -115,6 +115,7 @@ export const ContactSection: React.FC = () => {
 
               <a
                 href={PERSONAL_DATA.resumeUrl}
+                download="Niraj_Paul_Senior_iOS_Developer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full p-3.5 rounded-xl bg-gradient-to-r from-zinc-800 to-zinc-900 hover:from-zinc-700 hover:to-zinc-800 border border-white/10 flex items-center justify-center gap-2 text-xs font-semibold text-white transition-all shadow-lg"

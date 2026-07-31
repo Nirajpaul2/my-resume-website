@@ -64,7 +64,7 @@ export const PERSONAL_DATA = {
   email: "nirajpaul.dev@gmail.com",
   github: "https://github.com/nirajpaul",
   linkedin: "https://www.linkedin.com/in/nirajpaul",
-  resumeUrl: "#",
+  resumeUrl: "/Niraj_Paul_Senior_iOS_Developer_Resume.pdf",
   shortIntro: "I build high-performance iOS and Apple TV applications used by millions of users worldwide. I specialize in OTT Streaming, SwiftUI, scalable architectures, and premium user experiences.",
   detailedBio: `With over 11 years of engineering excellence in the Apple ecosystem, I architect and build enterprise-scale iOS and tvOS applications. Having led core video playback engines and high-traffic streaming features for major media platforms like SonyLIV and Tegna, as well as high-conversion e-commerce apps for Fabindia and Purplle, I bridge deep low-level AVFoundation/HLS video pipeline optimization with elegant SwiftUI visual design.`,
   companies: [
