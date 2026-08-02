@@ -101,7 +101,7 @@ export const FEATURED_PROJECTS: Project[] = [
     url: "https://library.aiwazir.com/",
     youtubeUrl: "https://www.youtube.com/watch?v=g71VOFjvJhk",
     youtubeId: "g71VOFjvJhk",
-    tech: ["Flutter", "FastAPI", "Supabase", "Firebase", "Docker", "N8N"],
+    tech: ["Flutter", "FastAPI", "Supabase", "Firebase", "Razorpay", "Docker", "N8N"],
     keyFeatures: [
       "Real-time seat reservation matrix with interactive layout map",
       "Instant QR Code scanning for contactless check-in/check-out",
