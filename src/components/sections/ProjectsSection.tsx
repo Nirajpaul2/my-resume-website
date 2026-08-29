@@ -103,7 +103,7 @@ export const ProjectsSection: React.FC = () => {
                       rel="noopener noreferrer"
                       className="text-xs text-white hover:text-[#0A84FF] bg-zinc-900 border border-white/10 px-3 py-1 rounded-lg flex items-center gap-1 font-mono transition-all hover:scale-105"
                     >
-                      Visit Live Demo <ArrowUpRight className="w-3.5 h-3.5 text-[#0A84FF]" />
+                      {project.url.includes("play.google.com") ? "Play Store" : "Live Demo"} <ArrowUpRight className="w-3.5 h-3.5 text-[#0A84FF]" />
                     </a>
                   )}
                 </div>

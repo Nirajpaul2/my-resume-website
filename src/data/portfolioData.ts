@@ -91,6 +91,28 @@ export const ACHIEVEMENTS = [
 
 export const FEATURED_PROJECTS: Project[] = [
   {
+    id: "sanatan-ai-app",
+    title: "Sanatan AI App",
+    subtitle: "AI-Powered Cultural & Knowledge Platform",
+    description: "Next-generation mobile application delivering AI-driven spiritual guidance, multi-language audio streaming, real-time knowledge retrieval, and interactive community features.",
+    fullDescription: "A feature-rich mobile platform engineered with Flutter and modern cloud microservices. Combines real-time AI conversation engines, seamless background audio streaming, instant push notifications, multi-language localization, and secure Android Play Store distribution.",
+    category: "Fullstack / Cloud",
+    featured: true,
+    url: "https://play.google.com/store/apps/details?id=com.aiwazir.sanatan.app",
+    youtubeUrl: "https://www.youtube.com/watch?v=Z58A6DTNclE&t=4s",
+    youtubeId: "Z58A6DTNclE",
+    tech: ["iOS", "Android", "AI Engines", "Firebase", "REST API", "Audio Streaming", "Flutter"],
+    keyFeatures: [
+      "Real-time AI query resolution with context-aware responses",
+      "Seamless background audio & video streaming playback pipeline",
+      "Multi-language support with instant locale switching",
+      "Interactive content discovery with personalized recommendations",
+      "Published application on Google Play Store with active user base"
+    ],
+    metrics: "4.8★ Play Store rating with active daily user engagement",
+    role: "Mobile Architect & Platform Developer"
+  },
+  {
     id: "library-management",
     title: "Library Management System",
     subtitle: "Cloud-Based Academic & Seat Booking Platform",

@@ -12,8 +12,6 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { TechStackSection } from "@/components/sections/TechStackSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { AchievementsSection } from "@/components/sections/AchievementsSection";
-import { BlogSection } from "@/components/sections/BlogSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
 
@@ -47,8 +45,6 @@ export default function Home() {
         <TechStackSection />
         <ExperienceSection />
         <ProjectsSection />
-        <AchievementsSection />
-        <BlogSection />
         <ContactSection />
         <Footer />
       </div>

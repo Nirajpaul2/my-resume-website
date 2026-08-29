@@ -151,26 +151,6 @@ export const AboutSection: React.FC = () => {
 
             </div>
 
-            {/* Core Competencies 4-Column Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {coreCompetencies.map((comp) => {
-                const IconComponent = comp.icon;
-                return (
-                  <motion.div
-                    key={comp.title}
-                    whileHover={{ y: -4 }}
-                    className="p-6 rounded-2xl bg-zinc-900/60 border border-white/10 hover:border-[#0A84FF]/40 transition-all space-y-3"
-                  >
-                    <div className="w-10 h-10 rounded-xl bg-[#0A84FF]/10 border border-[#0A84FF]/20 flex items-center justify-center text-[#0A84FF]">
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                    <h4 className="text-base font-bold text-white">{comp.title}</h4>
-                    <p className="text-xs text-zinc-400 leading-relaxed">{comp.desc}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-
           </div>
         )}
 

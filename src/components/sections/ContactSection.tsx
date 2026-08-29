@@ -20,11 +20,8 @@ export const ContactSection: React.FC = () => {
         
         {/* Large CTA Banner Header */}
         <div className="text-center max-w-4xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-mono tracking-widest text-[#0A84FF] uppercase">
-            // Initiate Collaboration
-          </span>
           <h2 className="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
-            Let&apos;s Build <span className="gradient-text-apple">Something Amazing</span>.
+            Contact <span className="gradient-text-apple">Information</span>
           </h2>
           <p className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto">
             Available for Senior iOS Lead roles, high-concurrency OTT streaming consulting, and enterprise Apple TV architectures.

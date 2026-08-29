@@ -46,7 +46,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette }) => {
     { name: "Tech Stack", href: "#skills", id: "skills" },
     { name: "Experience", href: "#experience", id: "experience" },
     { name: "Projects", href: "#projects", id: "projects" },
-    { name: "Articles", href: "#blog", id: "blog" },
     { name: "Contact", href: "#contact", id: "contact" },
   ];
 
@@ -113,6 +112,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette }) => {
               <Command className="w-3.5 h-3.5 text-[#0A84FF]" />
               <span className="font-mono text-[11px]">⌘K</span>
             </button>
+
+            {/* Resume PDF Download Button */}
+            <a
+              href={PERSONAL_DATA.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-zinc-200 bg-zinc-900/90 hover:bg-zinc-800 border border-white/10 hover:border-white/20 rounded-lg transition-all hover:scale-105"
+            >
+              <FileText className="w-3.5 h-3.5 text-[#0A84FF]" /> Resume PDF
+            </a>
 
             {/* Direct Contact Button */}
             <a

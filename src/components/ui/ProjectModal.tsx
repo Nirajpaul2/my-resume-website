@@ -125,7 +125,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                   rel="noopener noreferrer"
                   className="px-5 py-2 text-xs font-semibold text-white bg-[#0A84FF] hover:bg-[#0066CC] rounded-xl flex items-center gap-1.5 transition-all shadow-lg shadow-[#0A84FF]/20"
                 >
-                  Visit Live Project <ExternalLink className="w-3.5 h-3.5" />
+                  {project.url.includes("play.google.com") ? "Get on Google Play Store" : "Visit Live Project"} <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
             </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail, Play, Code, Sparkles, ChevronDown, CheckCircle2, ExternalLink } from "lucide-react";
+import { ArrowRight, Download, Mail, Play, Code, Sparkles, ChevronDown, CheckCircle2, ExternalLink, Phone, Building2 } from "lucide-react";
 import { PERSONAL_DATA } from "@/data/portfolioData";
 
 export const HeroSection: React.FC = () => {
@@ -67,6 +67,39 @@ export const HeroSection: React.FC = () => {
                   {spec}
                 </span>
               ))}
+            </motion.div>
+
+            {/* At-a-Glance Executive HR Summary Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="p-4 rounded-2xl bg-zinc-900/80 border border-white/10 space-y-2.5 backdrop-blur-md shadow-xl text-left"
+            >
+              <div className="flex items-center justify-between text-[11px] font-mono text-zinc-400">
+                <span className="text-[#0A84FF] font-semibold flex items-center gap-1">
+                  <Sparkles className="w-3.5 h-3.5" /> Executive HR Summary
+                </span>
+                <span>Bangalore, India</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
+                <div className="p-2 rounded-lg bg-zinc-950/80 border border-white/5">
+                  <span className="text-[10px] text-zinc-500 block font-mono">Experience</span>
+                  <span className="font-bold text-white">11+ Yrs Senior iOS</span>
+                </div>
+                <div className="p-2 rounded-lg bg-zinc-950/80 border border-white/5">
+                  <span className="text-[10px] text-zinc-500 block font-mono">Key Brands</span>
+                  <span className="font-bold text-white">SonyLIV • Tegna</span>
+                </div>
+                <div className="p-2 rounded-lg bg-zinc-950/80 border border-white/5">
+                  <span className="text-[10px] text-zinc-500 block font-mono">Retail &amp; OTT</span>
+                  <span className="font-bold text-white">Purplle • Fabindia</span>
+                </div>
+                <div className="p-2 rounded-lg bg-zinc-950/80 border border-white/5">
+                  <span className="text-[10px] text-zinc-500 block font-mono">Direct Outreach</span>
+                  <span className="font-bold text-emerald-400">+91-9942419837</span>
+                </div>
+              </div>
             </motion.div>
 
             {/* Action Buttons */}
@@ -213,9 +246,6 @@ export const HeroSection: React.FC = () => {
                           Watch on YouTube <ExternalLink className="w-2.5 h-2.5" />
                         </a>
                       </div>
-                      <p className="text-[11px] text-zinc-400">
-                        Demonstrating live architecture, real-time seat reservation, and high-concurrency streaming.
-                      </p>
                     </div>
 
                     <div className="pt-2 flex items-center justify-between text-[11px] text-zinc-500 font-mono border-t border-white/5">
