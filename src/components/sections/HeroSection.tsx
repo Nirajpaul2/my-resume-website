@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail, Play, Code, Sparkles, ChevronDown, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Download, Mail, Play, Code, Sparkles, ChevronDown, CheckCircle2, ExternalLink } from "lucide-react";
 import { PERSONAL_DATA } from "@/data/portfolioData";
 
 export const HeroSection: React.FC = () => {
@@ -184,31 +184,37 @@ export const HeroSection: React.FC = () => {
               <div className="pt-4">
                 {activeTab === "preview" ? (
                   <div className="space-y-3">
-                    {/* Simulated 4K Video Player Screen */}
-                    <div className="relative rounded-xl overflow-hidden aspect-video bg-zinc-950 border border-white/10 group">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 z-10" />
-                      
-                      {/* Play overlay graphics */}
-                      <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
-                        <div className="w-12 h-12 rounded-full bg-[#0A84FF]/80 backdrop-blur-md flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform">
-                          <Play className="w-5 h-5 fill-current ml-0.5" />
-                        </div>
-                        <span className="text-[11px] text-white/80 font-mono mt-2">
-                          4K HLS Stream • FairPlay DRM Active
-                        </span>
-                      </div>
+                    {/* Live 4K Video Player Screen */}
+                    <div className="relative rounded-xl overflow-hidden aspect-video bg-zinc-950 border border-white/10 shadow-2xl group">
+                      <iframe
+                        src="https://www.youtube.com/embed/Z58A6DTNclE?autoplay=0&rel=0&start=4"
+                        title="Niraj Paul Live Project Showcase"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full border-0 relative z-10"
+                      />
 
                       {/* Live Streaming Badge */}
-                      <div className="absolute top-2 left-2 z-20 px-2 py-0.5 rounded bg-rose-600/90 text-[10px] font-bold text-white tracking-wider flex items-center gap-1">
+                      <div className="absolute top-2 left-2 z-20 px-2 py-0.5 rounded bg-rose-600/90 text-[10px] font-bold text-white tracking-wider flex items-center gap-1 pointer-events-none">
                         <span className="w-1.5 h-1.5 rounded-full bg-white animate-ping" />
-                        LIVE OTT
+                        LIVE DEMO
                       </div>
                     </div>
 
                     <div className="space-y-1 text-left">
-                      <h4 className="text-xs font-semibold text-white">Custom AVPlayer Video Engine</h4>
+                      <div className="flex items-center justify-between">
+                        <h4 className="text-xs font-semibold text-white">Live System Showcase</h4>
+                        <a
+                          href="https://www.youtube.com/watch?v=Z58A6DTNclE"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[10px] font-mono text-[#0A84FF] hover:underline flex items-center gap-0.5"
+                        >
+                          Watch on YouTube <ExternalLink className="w-2.5 h-2.5" />
+                        </a>
+                      </div>
                       <p className="text-[11px] text-zinc-400">
-                        Zero-buffer adaptive bitrate streaming engine powering SonyLIV & Tegna apps.
+                        Demonstrating live architecture, real-time seat reservation, and high-concurrency streaming.
                       </p>
                     </div>
 
