@@ -28,7 +28,7 @@ export default function ResumePage() {
           </button>
 
           <a
-            href="https://drive.google.com/file/d/1jn_iu_X9TBHHMoi4lULB-JAtrZWYdJom/view?usp=sharing"
+            href="https://drive.google.com/file/d/1zC2MpoYDZZSE3WzuThksNFw02CXKt4C_/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 text-xs font-semibold bg-[#0A84FF] hover:bg-[#0066CC] text-white rounded-xl flex items-center gap-2 transition-all shadow-lg shadow-[#0A84FF]/20"

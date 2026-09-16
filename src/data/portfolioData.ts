@@ -58,7 +58,7 @@ export const PERSONAL_DATA = {
   github: "https://github.com/Nirajpaul2",
   linkedin: "https://www.linkedin.com/in/niraj-paul-8782ab143",
   mediumUrl: "https://medium.com/@nirajpaul2",
-  resumeUrl: "https://drive.google.com/file/d/1jn_iu_X9TBHHMoi4lULB-JAtrZWYdJom/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1zC2MpoYDZZSE3WzuThksNFw02CXKt4C_/view?usp=sharing",
   shortIntro: "I build high-performance iOS and Apple TV applications used by millions of users worldwide. I specialize in OTT Streaming, SwiftUI, scalable architectures, and premium user experiences.",
   detailedBio: `With over 11 years of engineering excellence in the Apple ecosystem, I architect and build enterprise-scale iOS and tvOS applications. Having delivered core video playback engines and high-traffic streaming features for major media platforms like SonyLIV and Tegna, as well as high-conversion e-commerce apps for Fabindia and Purplle, I bridge deep low-level AVFoundation/HLS video pipeline optimization with elegant SwiftUI visual design.`,
   companies: [
